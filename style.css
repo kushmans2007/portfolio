@@ -1,0 +1,144 @@
+:root {
+    --bg: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent: #000000;
+    --border: #ececec;
+    --soft-bg: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Hero */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.hero-text { flex: 2; }
+.hero-image { flex: 1; }
+
+.hero-image img {
+    /* border:3px solid ;
+    border-color: rgb(76, 75, 75); */
+    width: 100%;
+    border-radius: 20px; /* Modern rounded corners */
+    filter: sepia(10%) contrast(110%); /* Subtle professional filter */
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.primary-btn {
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.secondary-btn {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    font-weight: 600;
+}
+
+/* Sections */
+.content-section {
+    margin-bottom: 80px;
+}
+
+.label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* Bento Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-category {
+    background: var(--soft-bg);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.skill-category h4 { margin-bottom: 10px; }
+.skill-category p { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* Experience Timeline */
+.experience-item {
+    margin-bottom: 40px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date { font-size: 0.9rem; color: var(--text-secondary); }
+
+footer {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-section { flex-direction: column-reverse; text-align: center; }
+    .skills-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.5rem; }
+}
